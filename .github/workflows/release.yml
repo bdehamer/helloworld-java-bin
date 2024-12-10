@@ -57,7 +57,7 @@ jobs:
         with:
           arguments: assemble
         env:
-          JRELEASER_PROJECT_VERSION: ${{ needs.precheck.outputs.VERSION }}
+          JRELEASER_PROJECT_VERSION: 1.2.0
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Release
@@ -65,7 +65,7 @@ jobs:
         with:
           arguments: full-release
         env:
-          JRELEASER_PROJECT_VERSION: ${{ needs.precheck.outputs.VERSION }}
+          JRELEASER_PROJECT_VERSION: 1.2.0
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: JReleaser output
